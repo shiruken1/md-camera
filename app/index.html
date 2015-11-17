@@ -11,12 +11,13 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" href="/style.css">
-
+    <link rel="stylesheet" href="vendors/angular-material/angular-material.css">
 </head>
 <body ng-app="camera">
 
     <main class="app" ng-controller="cameraController as vm">
-        <ng-camera
+        <div s>
+        <md-camera
             capture-message="Cheeeese!"
             countdown="3"
             output-height="160"
@@ -30,12 +31,16 @@
             flash-fallback-url="/vendors/webcamjs/webcam.swf"
             overlay-url="/overlay.png"
             shutter-url="/shutter.mp3"
-            ></ng-camera>
+            ></md-camera>
 
         <img ng-if="vm.picture" ng-src="{{vm.picture}}" alt="webcam picture">
+    </div>
     </main>
 
     <script src="/vendors/angular/angular.js"></script>
+    <script src="/vendors/angular-material/angular-material.js"></script>
+    <script src="/vendors/angular-animate/angular-animate.js"></script>
+    <script src="/vendors/angular-aria/angular-aria.js"></script>
     <script src="/vendors/webcamjs/webcam.js"></script>
 
     <script src="/angular/app.js"></script>

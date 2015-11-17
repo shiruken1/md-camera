@@ -2,6 +2,6 @@
     'use strict';
 
     angular
-        .module('camera', []);
+        .module('camera', ['ngMaterial', 'ngAnimate', 'ngAria']);
 
 })(angular);

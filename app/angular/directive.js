@@ -29,15 +29,16 @@
                 'snapshot': '='
             },
             // 'templateUrl': '/angular/md-camera.html',
-            'template': ['<div class="md-camera">',
-                '<div class="md-camera-countdown" ng-if="countdown" ng-show="activeCountdown">',
-                '<p>{{countdownText}}</p>',
-                '</div>',
-                '<div class="md-camera-stack">',
+            'template': ['<div class="md-camera" layout="column">',
+
+                '<div class="md-camera-stack" style="align-self:center">',
                 '<img class="md-camera-overlay" ng-if="overlayUrl" ng-show="cameraLive" ng-src="{{overlayUrl}}" alt="overlay">',
-                '<md-whiteframe class="md-whiteframe-2dp" id="md-camera-feed"></md-whiteframe>',
+                '<md-card class="md-whiteframe-2dp" id="md-camera-feed"></md-card>',
+                '<md-tooltip class="md-camera-countdown" md-visible="activeCountdown" md-direction="up">',
+                '{{countdownText}}',
+                '</md-tooltip>',
                 '</div>',
-                '<md-button class="md-raised md-primary" id="md-camera-action" ng-click="getSnapshot()">{{actionMessage}}</md-button>',
+                '<md-button style="align-self:center;max-width:150px;" class="md-raised md-primary" id="md-camera-action" ng-click="getSnapshot()">{{actionMessage}}</md-button>',
                 '</div>'].join(''),
             'link': link
         };
