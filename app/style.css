@@ -1,7 +1,7 @@
-.ng-camera-stack {
+.md-camera-stack {
     position: relative;
 }
-    .ng-camera-overlay {
+    .md-camera-overlay {
         left: 0;
         position: absolute;
         top: 0;

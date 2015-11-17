@@ -1,7 +1,8 @@
 {
-    "name": "ng-camera",
+    "name": "md-camera",
     "dependencies": {
         "angular": "1.3.*",
+        "angular-material": "0.11",
         "webcamjs": "*"
     }
 }

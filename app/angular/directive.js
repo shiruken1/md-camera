@@ -4,7 +4,7 @@
 
     angular
         .module('camera')
-        .directive('ngCamera', directive);
+        .directive('mdCamera', directive);
 
     directive.$inject = ['$q', '$timeout'];
 
@@ -28,16 +28,16 @@
                 'jpegQuality': '@',
                 'snapshot': '='
             },
-            // 'templateUrl': '/angular/ng-camera.html',
-            'template': ['<div class="ng-camera">',
-                '<div class="ng-camera-countdown" ng-if="countdown" ng-show="activeCountdown">',
-                '<p class="tick">{{countdownText}}</p>',
+            // 'templateUrl': '/angular/md-camera.html',
+            'template': ['<div class="md-camera">',
+                '<div class="md-camera-countdown" ng-if="countdown" ng-show="activeCountdown">',
+                '<p>{{countdownText}}</p>',
                 '</div>',
-                '<div class="ng-camera-stack">',
-                '<img class="ng-camera-overlay" ng-if="overlayUrl" ng-show="cameraLive" ng-src="{{overlayUrl}}" alt="overlay">',
-                '<div id="ng-camera-feed"></div>',
+                '<div class="md-camera-stack">',
+                '<img class="md-camera-overlay" ng-if="overlayUrl" ng-show="cameraLive" ng-src="{{overlayUrl}}" alt="overlay">',
+                '<md-whiteframe class="md-whiteframe-2dp" id="md-camera-feed"></md-whiteframe>',
                 '</div>',
-                '<button id="ng-camera-action" ng-click="getSnapshot()">{{actionMessage}}</button>',
+                '<md-button class="md-raised md-primary" id="md-camera-action" ng-click="getSnapshot()">{{actionMessage}}</md-button>',
                 '</div>'].join(''),
             'link': link
         };
@@ -92,7 +92,7 @@
             if(scope.flashFallbackUrl !== 'undefined') {
                 Webcam.setSWFLocation(scope.flashFallbackUrl);
             }
-            Webcam.attach('#ng-camera-feed');
+            Webcam.attach('#md-camera-feed');
 
             /**
              * Register WebcamJS events

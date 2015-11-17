@@ -1,0 +1,13 @@
+<div class="md-camera">
+
+    <div class="md-camera-countdown" ng-if="countdown" ng-show="activeCountdown">
+        <p class="tick">{{countdownText}}</p>
+    </div>
+
+    <div class="md-camera-stack">
+        <img class="md-camera-overlay" ng-if="overlayUrl" ng-show="cameraLive" ng-src="{{overlayUrl}}" alt="overlay">
+        <div id="md-camera-feed"></div>
+    </div>
+
+    <button id="md-camera-action" ng-click="getSnapshot()">{{actionMessage}}</button>
+</div>

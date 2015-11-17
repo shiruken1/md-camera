@@ -1,35 +1,32 @@
-# ng-camera
+# md-camera
+Md-camera is a material-angular adaptation of [ng-camera by Benjamin Cabanes](https://github.com/bcabanes/ng-camera)
 
-Ng-camera is an AngularJS directive for capturing images
+Md-camera is an AngularJS directive for capturing images
 form your computer's camera, and delivering them to you as [Data URIs](http://en.wikipedia.org/wiki/Data_URI_scheme).
 The images is transmitted to your AngularJS controller and can be modified
 like you want.
 
-To manage this process, ng-camera uses the [WebcamJS](https://github.com/jhuckaby/webcamjs) standalone Javascript library developed by Joseph Huckaby,
+To manage this process, md-camera uses the [WebcamJS](https://github.com/jhuckaby/webcamjs) standalone Javascript library developed by Joseph Huckaby,
 to ensure fallback and crossbrowser requirements.
-
-## Live example
-
-To see a live example, go to the [demo's page](http://bcabanes.github.io/ng-camera).
 
 ## Installation
 
 #### Using [Bower](http://bower.io/)
 
 ```bash
-bower install ng-camera
+bower install md-camera
 ```
 
 ## Usage
 
 ### Import files scripts
 
-Ng-camera uses WebcamJS to work properly so you need to add the script in your
+Md-camera uses WebcamJS to work properly so you need to add the script in your
 main file, don't forget to load the directive file:
 
 ```html
 <script src="/path/to/webcam.js"></script>
-<script src="/path/to/ng-camera.js"></script>
+<script src="/path/to/md-camera.js"></script>
 ```
 
 ### Add the module as dependency
@@ -42,7 +39,7 @@ angular.module('myApplication', ['camera']);
 ### The directive
 
 ```html
-<ng-camera
+<md-camera
     capture-message="Cheeeese!"
     countdown="3"
     output-height="160"
@@ -58,12 +55,12 @@ angular.module('myApplication', ['camera']);
     flash-fallback-url="/vendors/webcamjs/webcam.swf"
     overlay-url="/overlay.png"
     shutter-url="/shutter.mp3"
-></ng-camera>
+></md-camera>
 ```
 
 #### Options
 
-ng-camera comes with lots of options to simplify your development:
+md-camera comes with lots of options to simplify your development:
 
 * `capture-message` _string_ Message to display when the countdown is finished
 | _dependant of_ `countdown`
