@@ -33,7 +33,7 @@
 
                 '<div class="md-camera-stack" style="align-self:center">',
                 '<img class="md-camera-overlay" ng-if="overlayUrl" ng-show="cameraLive" ng-src="{{overlayUrl}}" alt="overlay">',
-                '<md-card class="md-whiteframe-2dp" id="md-camera-feed"></md-card>',
+                '<md-card id="md-camera-feed"></md-card>',
                 '<md-tooltip class="md-camera-countdown" md-visible="activeCountdown" md-direction="up">',
                 '{{countdownText}}',
                 '</md-tooltip>',
