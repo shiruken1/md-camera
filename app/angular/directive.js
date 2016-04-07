@@ -26,7 +26,8 @@
                 'cropWidth': '@',
                 'imageFormat': '@',
                 'jpegQuality': '@',
-                'snapshot': '='
+                'snapshot': '=',
+                'snapshotCallback': '&' 
             },
             // 'templateUrl': '/angular/md-camera.html',
             'template': ['<div class="md-camera" layout="column">',
@@ -179,6 +180,9 @@
 
                     Webcam.snap(function(data_uri) {
                         scope.snapshot = data_uri;
+
+                        if(typeof scope.snapshotCallback == 'function' )
+                            scope.snapshotCallback({$snapshot_data:data_uri})
                     });
                 }
             };
